@@ -39,7 +39,7 @@ module EmHttpSslPatch
   end
 
   def host
-    parent.connopts.host
+    parent.connopts.proxy ? parent.uri.host : parent.connopts.host
   end
 
   def certificate_store
